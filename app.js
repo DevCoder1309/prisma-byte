@@ -28,8 +28,8 @@ const getAllRelatedContacts = async (contactIds) => {
 };
 
 app.get("/", async (req, res) => {
-  const users = await prisma.user.findMany();
-  res.json(users);
+  const contacts = await prisma.contact.findMany();
+  res.json(contacts);
 });
 
 app.post("/identify", async (req, res) => {
