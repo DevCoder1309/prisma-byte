@@ -5,6 +5,7 @@ const port = 3000;
 const prisma = new PrismaClient();
 const bodyParser = require("body-parser");
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 const findOldestPrimary = (contacts) => {
